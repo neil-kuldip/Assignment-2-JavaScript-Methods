@@ -15,27 +15,27 @@ Array.prototype.myEach = function() {
     }
 };
 
-// MAP //
+// MAP // --> Written by: Neil
 Array.prototype.myMap = function() {
 
 };
 
-// SOME //
+// SOME // --> Written by: Neil
 Array.prototype.mySome = function() {
 
 };
 
-// REDUCE //
+// REDUCE // --> Written by: Neil
 Array.prototype.myReduce = function() {
 
 };
 
-// INCLUDES //
+// INCLUDES // --> Written by: Neil
 Array.prototype.myIncludes = function() {
 
 };
 
-// INDEXOF //
+// INDEXOF // --> Written by: Ambonique
 Array.prototype.myIndexOf = function() {
 
 };
@@ -52,17 +52,17 @@ Array.prototype.myPush = function() {
     return this.length;  // Return new length of "this" array
 };
 
-// LASTINDEXOF //
+// LASTINDEXOF // --> Written by: Ambonique
 Array.prototype.myLastIndexOf = function() {
 
 };
 
-// KEYS //
+// KEYS // --> Written by: Ambonique
 Object.myKeys = function() {
 
 };
 
-// VALUES //
+// VALUES // --> Written by: Ambonique
 Object.myValues = function() {
 
 };
