@@ -36,8 +36,19 @@ Array.prototype.myIncludes = function() {
 };
 
 // INDEXOF // --> Written by: Ambonique
-Array.prototype.myIndexOf = function() {
-
+Array.prototype.myIndexOf = function(element, startIndex = 0) {
+    if (startIndex > this.length || startIndex < 0) return -1;
+    let found = false;
+    let counter = startIndex;
+    while (counter < this.length) {
+        if (this[counter] === element) {
+            found = true;
+            break;
+        }
+        counter++;
+    }
+    if (found === false) return -1;
+    return counter;  
 };
 
 // PUSH // --> Provided by Professor Lai
