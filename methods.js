@@ -41,7 +41,7 @@ Array.prototype.mySome = function(callbackFn) {
         // element, index
         // element, index, array
         if (callbackFn(this[i], i, this) === true) {
-            satisfy = true;  //Just needs one element to make function return true
+            satisfy = true;  // Just needs one element to make function return true
         }
     }
     return satisfy;
@@ -50,7 +50,7 @@ Array.prototype.mySome = function(callbackFn) {
 // REDUCE // --> Written by: Neil
 Array.prototype.myReduce = function(callbackFn, initialValue = this[0]) {
     let result = initialValue;
-    let i = initialValue === this[0] ? 1 : 0; //If inital value is first element, for loop starts with second element
+    let i = initialValue === this[0] ? 1 : 0; // If inital value is first element, for loop starts with second element
     for (i; i < this.length; i++) { 
         if (this[i] === undefined) continue;
         // callbackFn can take up to 4 input parameters:
@@ -64,8 +64,13 @@ Array.prototype.myReduce = function(callbackFn, initialValue = this[0]) {
 };
 
 // INCLUDES // --> Written by: Neil
-Array.prototype.myIncludes = function() {
-
+Array.prototype.myIncludes = function(value, startIndex = 0) {
+    let i = startIndex < 0 ? startIndex + this.length : startIndex; //If start index is negative, will start from that many places back in array
+    let found = false;
+    for (i; i < this.length; i++) {
+        if (this[i] === value) found = true;
+    }
+    return found;
 };
 
 // INDEXOF // --> Written by: Ambonique
