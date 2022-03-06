@@ -31,8 +31,20 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // SOME // --> Written by: Neil
-Array.prototype.mySome = function() {
-
+Array.prototype.mySome = function(callbackFn) {
+    let satisfy = false;
+    for (let i = 0; i < this.length; i++)
+    {
+        if(this[i] === undefined) continue;
+        // callbackFn can take up to 3 input parameters:
+        // element
+        // element, index
+        // element, index, array
+        if (callbackFn(this[i], i, this) === true) {
+            satisfy = true;  //Just needs one element to make function return true
+        }
+    }
+    return satisfy;
 };
 
 // REDUCE // --> Written by: Neil
