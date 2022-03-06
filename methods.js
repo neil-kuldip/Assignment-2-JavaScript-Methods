@@ -49,7 +49,18 @@ Array.prototype.mySome = function(callbackFn) {
 
 // REDUCE // --> Written by: Neil
 Array.prototype.myReduce = function() {
-
+    let result = initialValue;
+    let i = initialValue === this[0] ? 1 : 0;
+    for (i; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+        // callbackFn can take up to 4 input parameters:
+        // previousValue
+        // previousValue, currentValue
+        // previousValue, currentValue, index
+        // previousValue, currentValue, index, array
+        result = callbackFn(result, this[i], i, this);
+    }
+    return result;
 };
 
 // INCLUDES // --> Written by: Neil
