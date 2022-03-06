@@ -4,7 +4,7 @@
 // Resources Referenced: https://developer.mozilla.org/en-US/
 
 // FOR EACH // --> Provided by Professor Lai
-Array.prototype.myEach = function() {
+Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++) {   // "this" keyword refers to the array being called.
         if (this[i] === undefined) continue;
         // callbackFn can take up to 3 input parameters:
@@ -16,8 +16,18 @@ Array.prototype.myEach = function() {
 };
 
 // MAP // --> Written by: Neil
-Array.prototype.myMap = function() {
-
+Array.prototype.myMap = function(callbackFn) {
+    let result = [];
+    for (let i = 0; i < this.length; i++)
+    {
+        if(this[i] === undefined) result.push(undefined);
+        // callbackFn can take up to 3 input parameters:
+        // element
+        // element, index
+        // element, index, array
+        else result.push(callbackFn(this[i], i, this));
+    }
+    return result;
 };
 
 // SOME // --> Written by: Neil
@@ -37,7 +47,7 @@ Array.prototype.myIncludes = function() {
 
 // INDEXOF // --> Written by: Ambonique
 Array.prototype.myIndexOf = function(element, startIndex = 0) {
-    if (startIndex > this.length || startIndex < 0) return -1;
+    if (startIndex > this.length || startIndex < 0 || element === undefined) return -1;
     let found = false;
     let counter = startIndex;
     while (counter < this.length) {
