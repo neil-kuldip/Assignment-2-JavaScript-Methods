@@ -48,8 +48,19 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // REDUCE // --> Written by: Neil
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callbackFn, initialValue = this[0]) {
+    let result = initialValue;
+    let i = initialValue === this[0] ? 1 : 0; //If inital value is first element, for loop starts with second element
+    for (i; i < this.length; i++) { 
+        if (this[i] === undefined) continue;
+        // callbackFn can take up to 4 input parameters:
+        // previousValue
+        // previousValue, currentValue
+        // previousValue, currentValue, index
+        // previousValue, currentValue, index, array
+        result = callbackFn(result, this[i], i, this);
+    }
+    return result;
 };
 
 // INCLUDES // --> Written by: Neil
