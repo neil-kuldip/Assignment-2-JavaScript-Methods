@@ -13,5 +13,14 @@ JavaScript and Array methods in order to recreate them.
 The assignment was done using JavaScript, where the function defintions were split and completed by
 each of the group members. 
 
-### Link
-TBD
+### Methods Implemented
+- [x] myEach
+- [x] myMap
+- [x] mySome
+- [x] myReduce
+- [x] myIncludes
+- [ ] myIndexOf
+- [x] myPush
+- [ ] myLastIndexOf
+- [ ] myKeys
+- [ ] myValues
