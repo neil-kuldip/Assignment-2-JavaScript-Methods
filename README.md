@@ -19,7 +19,7 @@ each of the group members.
 - [x] mySome
 - [x] myReduce
 - [x] myIncludes
-- [ ] myIndexOf
+- [x] myIndexOf
 - [x] myPush
 - [ ] myLastIndexOf
 - [ ] myKeys
