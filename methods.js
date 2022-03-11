@@ -73,21 +73,26 @@ Array.prototype.myIncludes = function(value, startIndex = 0) {
     return found;
 };
 
-// INDEXOF // --> Written by: Ambonique
-Array.prototype.myIndexOf = function(element, startIndex = 0) {
-    if (startIndex > this.length || startIndex < 0 || element === undefined) return -1;
-    let found = false;
-    let counter = startIndex;
-    while (counter < this.length) {
+//INDEXOF // --> Written by: Ambonique
+// @param element: the element that is being looked for in the array
+// @param startIndex: defaults to 0 if not given or start at the index given
+Array.prototype.myIndexOf = function (element, startIndex = 0) {
+    //Checks if the idex given is in bounds of the array
+      if (startIndex > this.length || startIndex < 0) return -1;
+      let found = false;
+      let counter = startIndex;
+    //Loops through the array to check if element is found
+      while (counter < this.length) {
         if (this[counter] === element) {
-            found = true;
-            break;
+          found = true;
+          break;
         }
         counter++;
-    }
-    if (found === false) return -1;
-    return counter;  
-};
+      }
+    //If the element is not found in the array then return -1
+      if (found === false) return -1;
+      return counter;
+    };
 
 // PUSH // --> Provided by Professor Lai
 Array.prototype.myPush = function() {
