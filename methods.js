@@ -107,8 +107,23 @@ Array.prototype.myPush = function() {
 };
 
 // LASTINDEXOF // --> Written by: Ambonique
-Array.prototype.myLastIndexOf = function() {
-
+// @element: the element in the array
+// @lastIndex: gets the last index of the array
+// Starts from the end of the array to find the element's last index
+Array.prototype.myLastIndexOf = function(element, lastIndex = this.length - 1) {
+  if (lastIndex > this.length || lastIndex < 0) return -1;
+  let found = false;
+  let counter = lastIndex;
+// Loops through the array to check
+  while (counter > 0) {
+    if (this[counter] === element) {
+      found = true;
+      break;
+    }
+    counter--;
+  }
+  if (found === false) return -1;
+  return counter;
 };
 
 // KEYS // --> Written by: Ambonique
