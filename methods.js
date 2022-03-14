@@ -146,7 +146,22 @@ Object.prototype.myKeys = function (container) {
   return result;
 };
 
-// VALUES // --> Written by: Ambonique
-Object.myValues = function() {
-
+// // VALUES // --> Written by: Ambonique
+// @container: the object or array
+Object.myValues = function(container) {
+  let result = [];
+// Checks if the object or array is not empty then pushes contents in result array
+  if (container.length !== undefined) {
+    for (let i = 0; i < container.length; i++) {
+      result.push(String(container[i]));
+    }
+    return result;
+  }
+  for (let property in container) {
+// Checks if theres an element in the array thats 'null' or empty and adds it to result
+    if (property !== "myKeys") {
+      result.push(container[property]);
+    }
+  }
+  return result;
 };
