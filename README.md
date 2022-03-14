@@ -22,5 +22,5 @@ each of the group members.
 - [x] myIndexOf
 - [x] myPush
 - [x] myLastIndexOf
-- [ ] myKeys
+- [x] myKeys
 - [ ] myValues
