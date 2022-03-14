@@ -127,8 +127,23 @@ Array.prototype.myLastIndexOf = function(element, lastIndex = this.length - 1) {
 };
 
 // KEYS // --> Written by: Ambonique
-Object.myKeys = function() {
-
+// @container: the object or array
+Object.prototype.myKeys = function (container) {
+  let result = [];
+// Checks if the object or array is not empty then pushes the key in result
+  if (container.length !== undefined) {
+    for (let i = 0; i < container.length; i++) {
+      result.push(String(i));
+    }
+    return result;
+  }
+// Checks if theres an element in the array thats 'null' or empty and adds the key to result
+  for (let property in container) {
+    if (property !== "myKeys") {
+      result.push(property);
+    }
+  }
+  return result;
 };
 
 // VALUES // --> Written by: Ambonique
