@@ -16,6 +16,7 @@ Array.prototype.myEach = function(callbackFn) {
 };
 
 // MAP // --> Written by: Neil
+// @param callbackFn: function to be applied to each element in the array
 Array.prototype.myMap = function(callbackFn) {
     let result = [];
     for (let i = 0; i < this.length; i++)
@@ -31,6 +32,7 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // SOME // --> Written by: Neil
+// @param callbackFn: function to be applied to each element in the array
 Array.prototype.mySome = function(callbackFn) {
     let satisfy = false;
     for (let i = 0; i < this.length; i++)
@@ -48,6 +50,8 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // REDUCE // --> Written by: Neil
+// @param callbackFn: function to be applied to each element in the array
+// @param initialValue: the initial value from the first call of the callbackFn -- default set to array's first element
 Array.prototype.myReduce = function(callbackFn, initialValue = this[0]) {
     let result = initialValue;
     let i = initialValue === this[0] ? 1 : 0; // If inital value is first element, for loop starts with second element
@@ -64,6 +68,8 @@ Array.prototype.myReduce = function(callbackFn, initialValue = this[0]) {
 };
 
 // INCLUDES // --> Written by: Neil
+// @param value: the value to be searched for in the array
+// @param startIndex: the starting index to begin iterating the array -- default set to 0
 Array.prototype.myIncludes = function(value, startIndex = 0) {
     let i = startIndex < 0 ? startIndex + this.length : startIndex; //If start index is negative, will start from that many places back in array
     let found = false;

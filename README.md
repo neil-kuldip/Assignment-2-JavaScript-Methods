@@ -7,7 +7,7 @@ Neil Kuldip -> [neil-kuldip](https://github.com/neil-kuldip)
 Ambonique Thomas -> [AmboThom](https://github.com/AmboThom)
 
 ### Description
-Our file, methods.js contains user-defined functions that mimic the behavior of established 
+Our file, [methods.js](methods.js), contains user-defined functions that mimic the behavior of established 
 JavaScript and Array methods in order to recreate them.
 
 The assignment was done using JavaScript, where the function defintions were split and completed by
